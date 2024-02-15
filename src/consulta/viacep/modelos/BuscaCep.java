@@ -30,6 +30,7 @@ public class BuscaCep {
 		String json = response.body();
 		Gson gson = new GsonBuilder().create();
 		Endereco umEndereco = gson.fromJson(json, Endereco.class);
+		leitura.close();
 
 		return umEndereco;
 	}
